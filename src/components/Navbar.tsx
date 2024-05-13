@@ -53,7 +53,7 @@ export const Navbar = () => {
     <AppBar position="sticky">
       <StyledToolbar>
         <Typography variant="h6" sx={{ display: { xs: 'none', sm: 'block' } }}>
-          Mask512
+          Facebooook
         </Typography>
         <AndroidIcon
           fontSize="large"
@@ -61,7 +61,13 @@ export const Navbar = () => {
         />
 
         <Search>
-          <InputBase placeholder="search..." />
+          <InputBase
+            placeholder="search..."
+            fullWidth
+            sx={{
+              color: 'primary.dark'
+            }}
+          />
         </Search>
 
         <Icons>
@@ -73,10 +79,15 @@ export const Navbar = () => {
             <Notifications />
           </Badge>
 
-          <Avatar onClick={() => setOpen(true)} sx={{ width: 30, height: 30, cursor: 'pointer' }}>DS</Avatar>
+          <Avatar
+            onClick={() => setOpen(true)}
+            sx={{ width: 30, height: 30, cursor: 'pointer' }}
+          >
+            DS
+          </Avatar>
         </Icons>
 
-        <UserBox onClick={() => setOpen(true)} sx={{cursor: 'pointer' }}>
+        <UserBox onClick={() => setOpen(true)} sx={{ cursor: 'pointer' }}>
           <Avatar
             sx={{
               width: 30,

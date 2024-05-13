@@ -12,13 +12,21 @@ import {
   Group,
   Groups,
   Home,
+  LightMode,
   Pages,
   Person2,
   Settings,
   ShoppingBasket,
 } from '@mui/icons-material';
 
-export const Sidebar = () => {
+import { Dispatch, SetStateAction } from 'react';
+
+type SidebarProps = {
+  setMode: Dispatch<SetStateAction<'dark' | 'light'>>;
+  mode: 'dark' | 'light';
+};
+
+export const Sidebar = ({ setMode, mode }: SidebarProps) => {
   return (
     <Box
       flex={1}
@@ -30,9 +38,9 @@ export const Sidebar = () => {
         },
       }}
     >
-      <Box position='fixed'>
-        <nav>
-          <List>
+      <Box position="fixed">
+        <Box>
+          <List sx={{height: '100vh'}}>
             <ListItem disablePadding>
               <ListItemButton component="a" href="#home">
                 <ListItemIcon>
@@ -89,16 +97,18 @@ export const Sidebar = () => {
                 <ListItemText primary="Profile" />
               </ListItemButton>
             </ListItem>
-            <ListItem disablePadding>
-              <ListItemButton>
+            <ListItem disablePadding sx={{ position: 'absolute', bottom: 100 }}>
+              <ListItemButton
+                onChange={() => setMode(mode === 'dark' ? 'light' : 'dark')}
+              >
                 <ListItemIcon>
-                  <DarkMode />
+                  {mode === 'dark' ? <LightMode /> : <DarkMode />}
                 </ListItemIcon>
-                <Switch />
+                <Switch checked={mode === 'dark'} />
               </ListItemButton>
             </ListItem>
           </List>
-        </nav>
+        </Box>
       </Box>
     </Box>
   );

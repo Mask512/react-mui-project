@@ -28,7 +28,7 @@ export const Rightbar = () => {
         <Typography variant="h6" fontWeight={100} mt={2} mb={2}>
           Online Friends
         </Typography>
-        <AvatarGroup max={5}>
+        <AvatarGroup max={5} sx={{justifyContent: 'start'}}>
           <Avatar
             alt="Remy Sharp"
             src="https://material-ui.com/static/images/avatar/1.jpg"
@@ -52,6 +52,14 @@ export const Rightbar = () => {
           <Avatar
             alt="Henderson"
             src="https://material-ui.com/static/images/avatar/6.jpg"
+          />
+          <Avatar
+            alt="Trevrson"
+            src="https://material-ui.com/static/images/avatar/7.jpg"
+          />
+          <Avatar
+            alt="Trevrson"
+            src="https://material-ui.com/static/images/avatar/7.jpg"
           />
           <Avatar
             alt="Trevrson"

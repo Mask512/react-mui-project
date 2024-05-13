@@ -61,7 +61,7 @@ export const Add = () => {
         aria-labelledby="child-modal-title"
         aria-describedby="child-modal-description"
       >
-        <Box width={400} height={320} bgcolor="white" p={3} borderRadius="5px">
+        <Box width={400} height={320} p={3} borderRadius="5px" bgcolor='background.default' color='text.primary'>
           <Typography
             id="modal-title"
             variant="h6"

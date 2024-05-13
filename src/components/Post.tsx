@@ -15,13 +15,13 @@ export const Post = () => {
   return (
     <Card sx={{margin : 5}}>
       <CardHeader
-        avatar={<Avatar>R</Avatar>}
+        avatar={<Avatar src='https://material-ui.com/static/images/avatar/1.jpg'>DS</Avatar>}
         action={
           <IconButton aria-label="settings">
             <MoreVert />
           </IconButton>
         }
-        title="Shrimp and Chorizo Paella"
+        title="Lorenzo"
         subheader="September 14, 2016"
       />
       <CardMedia
